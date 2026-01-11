@@ -1,15 +1,11 @@
-127.0.0.1 - - [11/Jan/2026 01:35:59] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/index.html HTTP/1.1" 304 -
-127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:01] code 404, message File not found
-127.0.0.1 - - [11/Jan/2026 01:36:01] "GET /favicon.ico HTTP/1.1" 404 -
-127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 02:05:10] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 02:05:11] "GET /html/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [11/Jan/2026 02:05:11] "GET /html/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [11/Jan/2026 02:05:12] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 02:05:12] code 404, message File not found
+127.0.0.1 - - [11/Jan/2026 02:05:12] "GET /favicon.ico HTTP/1.1" 404 -
 ----------------------------------------
-Exception occurred during processing of request from ('127.0.0.1', 46870)
+Exception occurred during processing of request from ('127.0.0.1', 46924)
 Traceback (most recent call last):
   File "/home/codespace/.python/current/lib/python3.12/socketserver.py", line 692, in process_request_thread
     self.finish_request(request, client_address)
@@ -33,23 +29,3 @@ Traceback (most recent call last):
     self._sock.sendall(b)
 BrokenPipeError: [Errno 32] Broken pipe
 ----------------------------------------
-127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:48] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:49] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:36:49] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/css/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:38:13] "GET /html/index.html HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:38:14] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Jan/2026 01:38:14] "GET /html/css/style.css HTTP/1.1" 200 -
