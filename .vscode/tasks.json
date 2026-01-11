@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve (python):start",
+      "type": "shell",
+      "command": "python3 -m http.server 8000 --directory .",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Serve (python):wait",
+      "type": "shell",
+      "command": "python3 ./.vscode/wait_for_url.py http://127.0.0.1:8000/html/index.html 20",
+      "dependsOn": ["Serve (python):start"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Serve (static-web-server):start",
+      "type": "shell",
+      "command": "static-web-server -w ./.config/static-web-server.toml",
+      "group": "build",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Serve (static-web-server):wait",
+      "type": "shell",
+      "command": "python3 ./.vscode/wait_for_url.py http://127.0.0.1:80/html/index.html 20",
+      "dependsOn": ["Serve (static-web-server):start"],
+      "problemMatcher": []
+    }
+    ,
+    {
+      "label": "Dev:serve",
+      "type": "shell",
+      "command": "bash ./.vscode/start_dev_server.sh && python3 ./.vscode/wait_for_url.py http://127.0.0.1:8000/html/index.html 20",
+      "problemMatcher": []
+    }
+  ]
+}

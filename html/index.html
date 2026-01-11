@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SEES VIDEO | Audrey Na About Me</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Atma:wght@300;400;500;600;700&family=Crafty+Girls&family=Gamja+Flower&family=Henny+Penny&family=Londrina+Shadow&family=Marck+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body">
+    <div class="star-field"></div>
+
+    <div class="center">
+        <h1 class="title">AUDREY NA - ABOUT ME!</h1>
+        <video width="100%" class="video-container" autoplay muted loop controls playsinline
+                aria-label="Camp PEACH montage video showing camp activities">
+                <source src="assets/index/audrey-na-sees-about-me.mp4" type="video/mp4">
+                Your browser does not support this video.
+            </video>
+    </div>
+
+
+    <script>
+    const starField = document.querySelector(".star-field");
+    const STAR_COUNT = 90;
+
+    const animations = [
+        "fall-down",
+        "fall-diag-left",
+        "fall-diag-right"
+    ];
+
+    const sizes = ["small", "medium", "large"];
+    const colors = ["c1", "c2", "c3", "c4", "c5"];
+
+    for (let i = 0; i < STAR_COUNT; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        // Random color
+        star.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+
+        // Random brightness
+        const brightness = Math.random();
+        if (brightness > 0.75) star.classList.add("bright");
+        else if (brightness < 0.3) star.classList.add("dim");
+
+        // Random size (weighted)
+        star.classList.add(
+        sizes[Math.random() < 0.6 ? 1 : Math.random() < 0.8 ? 0 : 2]
+        );
+
+        // Position
+        star.style.left = Math.random() * 100 + "vw";
+
+        // Direction
+        star.style.animationName =
+        animations[Math.floor(Math.random() * animations.length)];
+
+        // Speed
+        const speed = 4 + Math.random() * 8;
+        star.style.animationDuration = speed + "s";
+        star.style.animationDelay = `-${Math.random() * speed}s`;
+        star.style.left = (Math.random() * 120 - 10) + "vw";
+
+        starField.appendChild(star);
+    }
+
+    function createConstellation() {
+        const stars = [...document.querySelectorAll(".star.bright")];
+
+        if (stars.length < 2) return;
+
+        // Pick a random bright star
+        const starA = stars[Math.floor(Math.random() * stars.length)];
+        const rectA = starA.getBoundingClientRect();
+
+        // Find nearby bright stars
+        const nearby = stars.filter(star => {
+        if (star === starA) return false;
+        const r = star.getBoundingClientRect();
+        const dx = r.left - rectA.left;
+        const dy = r.top - rectA.top;
+        return Math.hypot(dx, dy) < 180; // distance threshold
+        });
+
+        if (nearby.length === 0) return;
+        const starB = nearby[Math.floor(Math.random() * nearby.length)];
+        const rectB = starB.getBoundingClientRect();
+
+        const line = document.createElement("div");
+        line.classList.add("constellation-line");
+
+        const x1 = rectA.left + rectA.width / 2;
+        const y1 = rectA.top + rectA.height / 2;
+        const x2 = rectB.left + rectB.width / 2;
+        const y2 = rectB.top + rectB.height / 2;
+
+        const length = Math.hypot(x2 - x1, y2 - y1);
+        const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+
+        line.style.left = x1 + "px";
+        line.style.top = y1 + "px";
+        line.style.width = length + "px";
+        line.style.transform = `rotate(${angle}deg)`;
+
+        document.querySelector(".star-field").appendChild(line);
+
+
+        setTimeout(() => line.remove(), 6000);
+    }
+
+    // Occasionally create constellations
+    setInterval(() => {
+        if (Math.random() < 0.6) createConstellation();
+    }, 2500);
+
+</script>
+
+
+</body>
+</html>

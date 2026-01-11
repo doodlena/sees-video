@@ -1,0 +1,55 @@
+127.0.0.1 - - [11/Jan/2026 01:35:59] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:00] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:01] code 404, message File not found
+127.0.0.1 - - [11/Jan/2026 01:36:01] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:26] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/index.html HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46870)
+Traceback (most recent call last):
+  File "/home/codespace/.python/current/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/codespace/.python/current/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/home/codespace/.python/current/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/home/codespace/.python/current/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/home/codespace/.python/current/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:35] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:48] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:49] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:36:49] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:13] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:32] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:43] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:37:53] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:38:13] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:38:14] "GET /html/assets/index/audrey-na-sees-about-me.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jan/2026 01:38:14] "GET /html/css/style.css HTTP/1.1" 200 -
